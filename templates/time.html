@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Time
+{% endblock %}
+
+{% block main %}
+    <h2>
+        Convert Time
+    </h2>
+    <form action="/time" method="post">
+        <div class="form-group">
+            <label>From:</label>
+            <input name="input" type="number">
+            <select  id="input_unit" name="input_unit">
+                <option value="">Select</option>
+
+                <!-- <option value="millennium">Millennium</option> -->
+                <option value="century">Century</option>
+                <option value="decade">Decade</option>
+                <option value="year">Year</option>
+                <option value="month">Month</option>
+                <option value="week">Week</option>
+                <option value="day">Day</option>
+                <option value="hour">Hour</option>
+                <option value="minute">Minute</option>
+                <option value="second">Second</option>
+                <option value="millisecond">Millisecond</option>
+
+            </select>
+            <p></p>
+            <label>To:</label>
+            <select  id="output_unit" name="output_unit">
+                <option value="">Select</option>
+
+                <!-- <option value="millennium">Millennium</option> -->
+                <option value="century">Century</option>
+                <option value="decade">Decade</option>
+                <option value="year">Year</option>
+                <option value="month">Month</option>
+                <option value="week">Week</option>
+                <option value="day">Day</option>
+                <option value="hour">Hour</option>
+                <option value="minute">Minute</option>
+                <option value="second">Second</option>
+                <option value="millisecond">Millisecond</option>
+            </select>
+        </div>
+        <p></p>
+        <button class="btn btn-primary" type="submit">Convert</button>
+    </form>
+{% endblock %}

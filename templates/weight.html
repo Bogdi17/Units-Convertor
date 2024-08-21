@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Weight
+{% endblock %}
+
+{% block main %}
+    <h2>
+        Convert Weight
+    </h2>
+    <form action="/weight" method="post">
+        <div class="form-group">
+            <label>From:</label>
+            <input name="input" type="number">
+            <select  id="input_unit" name="input_unit">
+                <option value="">Select</option>
+
+                <option value="gigagram">Gigagram</option>
+                <option value="tone">Ton</option>
+                <option value="quintal">Quintal</option>
+                <option value="kg">Kilogram</option>
+                <option value="lbs">Pound(lbs)</option>
+                <option value="hectogram">Hectogram</option>
+                <option value="decagram">Decagram</option>
+                <option value="gram">Gram</option>
+                <option value="decigram">Decigram</option>
+                <option value="centigram">Centigram</option>
+                <option value="mg">Milligram</option>
+
+            </select>
+            <p></p>
+            <label>To:</label>
+            <select  id="output_unit" name="output_unit">
+                <option value="">Select</option>
+
+                <option value="gigagram">Gigagram</option>
+                <option value="tone">Ton</option>
+                <option value="quintal">Quintal</option>
+                <option value="kg">Kilogram</option>
+                <option value="lbs">Pound(lbs)</option>
+                <option value="hectogram">Hectogram</option>
+                <option value="decagram">Decagram</option>
+                <option value="gram">Gram</option>
+                <option value="decigram">Decigram</option>
+                <option value="centigram">Centigram</option>
+                <option value="mg">Milligram</option>
+            </select>
+        </div>
+        <p></p>
+        <button class="btn btn-primary" type="submit">Convert</button>
+    </form>
+{% endblock %}

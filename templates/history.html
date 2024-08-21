@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <h2>
+        This is your converts history
+    </h2>
+    <table class="table table-bordered table-striped">
+        <thead class="thead-light">
+            <tr>
+                <th>Input</th>
+                <th>Output</th>
+                <th>Timestamp</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for convert in converts %}
+                <tr>
+                    <td>{{ convert.input }} {{convert.input_unit}}</td>
+                    <td>{{ convert.output }} {{convert.output_unit}}</td>
+                    <td>{{ convert.timestamp }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
